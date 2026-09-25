@@ -1,18 +1,12 @@
 # agent-preflight
 
-Automated pre-flight verification, type checking, secret scanning, and quality gates for autonomous coding agents.
+Verification gate and secret scanner for coding agents.
 
-## Overview
+## What it does
 
-A strict pre-flight gate designed to run before an agent commits code, creates pull requests, or completes tasks. It verifies that generated changes compile, pass tests, contain no hardcoded secrets, and adhere to workspace rules.
+Runs automated checks before an agent commits changes. It verifies that modified files compile, run tests, and do not contain hardcoded credentials or API keys.
 
-## Features
-
-- **Secret Detection**: Scans modified files for API keys, bearer tokens, and credentials.
-- **Build & Type Verification**: Validates TypeScript, Rust, Go, or Python workspaces automatically.
-- **Zero-False-Positive Policy**: Designed for reliable headless execution in agent loops.
-
-## Installation
+## Setup
 
 ```bash
 npm install
@@ -21,4 +15,4 @@ npm run build
 
 ## License
 
-MIT
+MIT License. Copyright (c) 2026 Darnell Dijksteel.
