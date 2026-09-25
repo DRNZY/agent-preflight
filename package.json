@@ -1,0 +1,35 @@
+{
+  "name": "agent-preflight",
+  "version": "1.0.0",
+  "description": "Automated pre-flight verification, type checking, secret scan, and quality gate for coding agents",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "agent-preflight": "./dist/bin/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/bin/cli.js",
+    "prepare": "npm run build",
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/*.test.js"
+  },
+  "keywords": [
+    "preflight",
+    "verification",
+    "code-quality",
+    "secrets-detection",
+    "agent-gate"
+  ],
+  "author": "darnell",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.5.4"
+  }
+}
